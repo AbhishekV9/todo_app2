@@ -11,11 +11,16 @@ function deleteTask(){
     }
 }
 
+function changeClass(div){
+    console.log(div);
+}
+
 //ADD task button functionality:-To add the task in tasks list
 let addButton=document.getElementById("add-button");
 addButton.onclick=function(){
     var inputValue=document.getElementById("task").value;
     var div=document.createElement("div");
+    div.className="uncomplete"
     var li=document.createElement("li");
     var i=document.createElement("i");
     if(inputValue=== ""){
@@ -26,7 +31,21 @@ addButton.onclick=function(){
         div.append(li,i);
         var myTasksList=document.getElementById('tasks-container');
         myTasksList.append(div);
-        deleteTask();    
+        deleteTask(); 
+        changeClass(div);   
     }
    
+}
+
+//All button functionality
+var allButton=document.getElementById('all-button');
+allButton.onclick=function(){
+    var tasksList=document.getElementsByClassName("complete");
+    for(let i=0;i<tasksList.length;i++){
+        tasksList[i].style.display='initial';
+    }
+    var tasksList=document.getElementsByClassName('uncomplete');
+    for(let i=0;i<tasksList.length;i++){
+        tasksList[i].style.display='initial';
+    }
 }

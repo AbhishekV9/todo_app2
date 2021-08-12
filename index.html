@@ -22,13 +22,17 @@
         <main>
             <div>
                 <ul id="tasks-container">
-                   <div>
+                   <div class="uncomplete">
                        <li>Homework</li>
                        <i class="fas fa-trash delete-tasks">dsds</i>
                    </div>
 
-                   <div>
-                    <input type="checkbox">
+                   <div class="uncomplete">
+                    <li>DS</li>
+                    <i class="fas fa-trash delete-tasks">dsds</i>
+                   </div>
+
+                   <div class="complete">                   
                     <li>DS</li>
                     <i class="fas fa-trash delete-tasks">dsds</i>
                    </div>
@@ -39,11 +43,11 @@
         </main>
 
         <footer>
-            <p>1 Tasks Left</p>
+            <p></p>
             <div>
-                <button>ALL</button>
-                <button>Completed</button>
-                <button>Uncomplited</button>
+                <button id="all-button">ALL</button>
+                <button id="complete-button">Completed</button>
+                <button id="uncomplete-button">Uncomplite</button>
             </div>
         </footer>
     
