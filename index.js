@@ -15,9 +15,6 @@ function deleteTask(){
 
 }
 
-function changeClass(div){
-    console.log(div);
-}
 
 //ADD task button functionality:-To add the task in tasks list
 let addButton=document.getElementById("add-button");
@@ -61,6 +58,7 @@ completeButton.onclick=function(){
     var tasksList=document.getElementsByClassName("complete");
     for(let i=0;i<tasksList.length;i++){
         tasksList[i].style.display='flex';
+        tasksList[i].classList.add("checked");
     }
     var tasksList=document.getElementsByClassName('uncomplete');
     for(let i=0;i<tasksList.length;i++){
@@ -114,10 +112,13 @@ clearAllbtn.onclick=function(){
 
 //adding class checked when clicked on the lsit
 var list=document.querySelector('ul');
-console.log(list);
 list.addEventListener('click',function(e){
     if(e.target.tagName==="DIV"){
-        e.target.classList.toggle("ckecked");
-        console.log(list);
+        // e.target.classList.toggle("checked");
+        e.target.classList.toggle("uncomplete")
+        e.target.classList.toggle("complete");        
+    }else if(e.target.tagName==="LI"){
+        e.target.parentElement.classList.toggle("uncomplete");
+        e.target.parentElement.classList.toggle("complete");    
     }
 },false);
