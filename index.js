@@ -47,11 +47,11 @@ var allButton=document.getElementById('all-button');
 allButton.onclick=function(){
     var tasksList=document.getElementsByClassName("complete");
     for(let i=0;i<tasksList.length;i++){
-        tasksList[i].style.display='initial';
+        tasksList[i].style.display='flex';
     }
     var tasksList=document.getElementsByClassName('uncomplete');
     for(let i=0;i<tasksList.length;i++){
-        tasksList[i].style.display='initial';
+        tasksList[i].style.display='flex';
     }
 }
 
@@ -60,7 +60,7 @@ var completeButton=document.getElementById('complete-button');
 completeButton.onclick=function(){
     var tasksList=document.getElementsByClassName("complete");
     for(let i=0;i<tasksList.length;i++){
-        tasksList[i].style.display='initial';
+        tasksList[i].style.display='flex';
     }
     var tasksList=document.getElementsByClassName('uncomplete');
     for(let i=0;i<tasksList.length;i++){
@@ -77,7 +77,7 @@ uncompleteButton.onclick=function(){
     }
     var tasksList=document.getElementsByClassName('uncomplete');
     for(let i=0;i<tasksList.length;i++){
-        tasksList[i].style.display='initial';
+        tasksList[i].style.display='flex';
     }
 }
 
