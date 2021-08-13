@@ -110,3 +110,14 @@ clearAllbtn.onclick=function(){
     }
     console.log(tasksList);
 }
+
+
+//adding class checked when clicked on the lsit
+var list=document.querySelector('ul');
+console.log(list);
+list.addEventListener('click',function(e){
+    if(e.target.tagName==="DIV"){
+        e.target.classList.toggle("ckecked");
+        console.log(list);
+    }
+},false);
