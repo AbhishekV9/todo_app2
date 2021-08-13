@@ -1,5 +1,10 @@
 var noOftasks=0;
 
+function setTasksCount(){
+    var p=document.getElementById("total-count");
+    p.innerHTML=noOftasks +" tasks left";
+}
+
 //delete button functionality:-to delete the tasks from tasks list
 deleteTask();
 function deleteTask(){
@@ -9,6 +14,7 @@ function deleteTask(){
         deleteList[i].addEventListener("click",function(){
             var div=this.parentElement;
             noOftasks--;
+            setTasksCount();
             div.remove();
         })
     }
@@ -34,6 +40,7 @@ addButton.onclick=function(){
         var myTasksList=document.getElementById('tasks-container');
         myTasksList.append(div);
         noOftasks++;
+       setTasksCount();
         deleteTask(); 
     }
    
@@ -85,15 +92,15 @@ uncompleteButton.onclick=function(){
 var completeAll=document.getElementById("complete-all");
 completeAll.onclick=function(){
     var totalDiv=document.querySelectorAll("ul .tsk");
-
-    //console.log(totalDiv);
     for(var i=0;i<totalDiv.length;i++){
        if(totalDiv[i].classList.contains("uncomplete")){
            totalDiv[i].classList.remove("uncomplete");
            totalDiv[i].classList.add("complete"); 
        }
     }
-    //console.log(totalDiv);
+    noOftasks=0;
+    setTasksCount();
+    
 }
 
 //Clear All Completed Task button
@@ -121,4 +128,8 @@ list.addEventListener('click',function(e){
         e.target.parentElement.classList.toggle("uncomplete");
         e.target.parentElement.classList.toggle("complete");    
     }
+    var tasksList=document.querySelectorAll("ul .uncomplete");
+    noOftasks=tasksList.length;
+    setTasksCount();
+
 },false);
