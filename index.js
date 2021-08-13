@@ -1,5 +1,5 @@
 var noOftasks=0;
-
+setTasksCount();
 function setTasksCount(){
     var p=document.getElementById("total-count");
     p.innerHTML=noOftasks +" tasks left";
@@ -18,7 +18,6 @@ function deleteTask(){
             div.remove();
         })
     }
-
 }
 
 
@@ -107,21 +106,18 @@ completeAll.onclick=function(){
 var clearAllbtn=document.getElementById('clear-complete');
 clearAllbtn.onclick=function(){
     var tasksList=document.querySelectorAll("ul .complete");
-    // console.log(tasksList.length);
-    // console.log(tasksList);
     for(var i=0;i<tasksList.length;i++){
          console.log(i);
         tasksList[i].remove();
     }
-    console.log(tasksList);
+ 
 }
 
 
-//adding class checked when clicked on the lsit
+//toggling class complete and uncomplete when clicked on the list
 var list=document.querySelector('ul');
 list.addEventListener('click',function(e){
     if(e.target.tagName==="DIV"){
-        // e.target.classList.toggle("checked");
         e.target.classList.toggle("uncomplete")
         e.target.classList.toggle("complete");        
     }else if(e.target.tagName==="LI"){
