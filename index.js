@@ -107,7 +107,6 @@ var clearAllbtn=document.getElementById('clear-complete');
 clearAllbtn.onclick=function(){
     var tasksList=document.querySelectorAll("ul .complete");
     for(var i=0;i<tasksList.length;i++){
-         console.log(i);
         tasksList[i].remove();
     }
  

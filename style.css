@@ -3,6 +3,8 @@ body{
     background-image: linear-gradient(#abbaab,#ffffff);
     font-family: cursive;
 }
+
+
 header{
     text-align:center;
     width:50%;
@@ -148,4 +150,20 @@ ul .complete::before {
   #total-count{
       margin-left:50px;
       color:darkslategray;
+  }
+
+  @media screen and (max-width:900px){
+    body{
+        margin: 2rem;
+    }
+    main{
+        width:80%;
+    }
+    header{
+        margin-top:10rem;
+        width:80%;
+    }
+    footer{
+        width: 80%;
+    }
   }
