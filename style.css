@@ -47,7 +47,7 @@ button {
     width:5rem;
 }
 button:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     background-color: white;
 }
 #two{
@@ -168,7 +168,25 @@ ul .complete::before {
     }
   }
 
-  @media screen and (max-width:400px){
+ 
+
+  @media screen and (max-width:550px){
+    body{
+        margin: 0;
+    }
+    main{
+        width:95%;
+    }
+    header{
+        margin-top:4rem;
+        width:95%;
+    }
+    footer{
+        width: 95%;
+    }
+  }
+
+   @media screen and (max-width:400px){
     body{
         margin: 0;
     }
@@ -190,4 +208,5 @@ ul .complete::before {
         margin-top:2rem;
         margin-left:-2rem;
     }
+
   }
