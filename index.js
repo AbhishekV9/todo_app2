@@ -40,7 +40,9 @@ addButton.onclick=function(){
         myTasksList.append(div);
         noOftasks++;
        setTasksCount();
-        deleteTask(); 
+        deleteTask();
+        var input=document.getElementById("task");
+        input.value=""; 
     }
    
 }
