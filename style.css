@@ -188,13 +188,39 @@ ul .complete::before {
     ul div{
         margin-left:3px;
     }
+    
+    
+  }
+
+   @media screen and (max-width:400px){
+    body{
+        margin: 0;
+    }
+    main{
+        width:95%;
+    }
+    header{
+        margin-top:4rem;
+        width:95%;
+    }
+    footer{
+        width: 95%;
+    }
+    ul div{
+        margin-left:3px;
+    }
+
     footer p{
         margin-top:2rem;
         margin-left:-2rem;
     }
-    
-  }
 
+    footer div button{
+        font-size: 0.8rem;
+    }
 
+    #two{
+        font-size: 0.8rem;
+    }
 
   }

@@ -23,7 +23,7 @@ function deleteTask(){
 
 //ADD task button functionality:-To add the task in tasks list
 let addButton=document.getElementById("add-button");
-addButton.onclick=function(){
+addButton.addEventListener("click",function(){
     var inputValue=document.getElementById("task").value;
     var div=document.createElement("div");
     div.className="uncomplete";
@@ -45,11 +45,11 @@ addButton.onclick=function(){
         input.value=""; 
     }
    
-}
+})
 
 //All button functionality:to show both uncomplete and completed tasks
 var allButton=document.getElementById('all-button');
-allButton.onclick=function(){
+allButton.addEventListener("click",function(){
     var tasksList=document.getElementsByClassName("complete");
     for(let i=0;i<tasksList.length;i++){
         tasksList[i].style.display='flex';
@@ -58,11 +58,11 @@ allButton.onclick=function(){
     for(let i=0;i<tasksList.length;i++){
         tasksList[i].style.display='flex';
     }
-}
+})
 
 //Completed button functionality:to show only completed tasks
 var completeButton=document.getElementById('complete-button');
-completeButton.onclick=function(){
+completeButton.addEventListener("click",function(){
     var tasksList=document.getElementsByClassName("complete");
     for(let i=0;i<tasksList.length;i++){
         tasksList[i].style.display='flex';
@@ -72,11 +72,11 @@ completeButton.onclick=function(){
     for(let i=0;i<tasksList.length;i++){
         tasksList[i].style.display='none';
     }
-}
+})
 
 //uncomplete button functionality:to show only uncomplete tasks
 var uncompleteButton=document.getElementById('uncomplete-button');
-uncompleteButton.onclick=function(){
+uncompleteButton.addEventListener("click",function(){
     var tasksList=document.getElementsByClassName("complete");
     for(let i=0;i<tasksList.length;i++){
         tasksList[i].style.display='none';
@@ -85,13 +85,13 @@ uncompleteButton.onclick=function(){
     for(let i=0;i<tasksList.length;i++){
         tasksList[i].style.display='flex';
     }
-}
+})
 
 
 
 //complete all tasks button
 var completeAll=document.getElementById("complete-all");
-completeAll.onclick=function(){
+completeAll.addEventListener('click',function(){
     var totalDiv=document.querySelectorAll("ul .tsk");
     for(var i=0;i<totalDiv.length;i++){
        if(totalDiv[i].classList.contains("uncomplete")){
@@ -102,17 +102,17 @@ completeAll.onclick=function(){
     noOftasks=0;
     setTasksCount();
     
-}
+})
 
 //Clear All Completed Task button
 var clearAllbtn=document.getElementById('clear-complete');
-clearAllbtn.onclick=function(){
+clearAllbtn.addEventListener("click",function(){
     var tasksList=document.querySelectorAll("ul .complete");
     for(var i=0;i<tasksList.length;i++){
         tasksList[i].remove();
     }
  
-}
+})
 
 
 //toggling class complete and uncomplete when clicked on the list
