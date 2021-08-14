@@ -167,3 +167,27 @@ ul .complete::before {
         width: 80%;
     }
   }
+
+  @media screen and (max-width:400px){
+    body{
+        margin: 0;
+    }
+    main{
+        width:95%;
+    }
+    header{
+        margin-top:4rem;
+        width:95%;
+    }
+    footer{
+        width: 95%;
+    }
+    ul div{
+        margin-left:3px;
+    }
+
+    footer p{
+        margin-top:2rem;
+        margin-left:-2rem;
+    }
+  }
